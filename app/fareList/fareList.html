@@ -1,0 +1,54 @@
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<div>
+				<select class="form-control location-picker" ng-model="fareSearch.origin">
+					<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>
+				</select>
+			</div>
+
+			<div class="transfer-icon">
+				<i class="glyphicon glyphicon-transfer"></i>
+			</div>
+
+			<div>
+				<select class="form-control location-picker" ng-model="fareSearch.destination">
+					<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>
+				</select>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<div>
+				<select class="form-control location-picker" ng-model="fareSearch.origin">
+					<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>
+				</select>
+			</div>
+
+			<div class="transfer-icon">
+				<i class="glyphicon glyphicon-plane"></i>
+			</div>
+
+			<div>
+				<select class="form-control location-picker" ng-model="fareSearch.destination">
+					<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>
+				</select>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div>
+
+	fareSearch: {{ fareSearch }}
+
+</div>
