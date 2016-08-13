@@ -75,6 +75,8 @@ angular.module('myApp.api', ['ngRoute'])
 
 		api.searchFares = function(qs) {
 
+			console.log(qs);
+
 			return $q(function(resolve, reject) {
 				setTimeout(function() {
 					resolve(mockFares);

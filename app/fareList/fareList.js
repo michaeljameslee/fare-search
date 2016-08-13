@@ -15,15 +15,25 @@ angular.module('myApp.fareList', ['ngRoute'])
   $scope.cityCodes = {data:[]};
   $scope.fareSearch = fareSearch;
 
-  fareSearch.searchFares().then(function (response) {
-    $scope.fares = response;
+  $scope.getCityCodes = function () {
+    fareSearch.getCityCodes().then(function (response) {
+      $scope.cityCodes.data = response;
+    });
+  };
+  $scope.getCityCodes();
+
+  $scope.searchFares = function () {
+    fareSearch.searchFares(fareSearch.searchParams).then(function (response) {
+      $scope.fares = response;
+    });
+  };
+  $scope.searchFares();
+
+  $scope.$watchCollection('fareSearch.searchParams', function(newValue, oldValue) {
+    if (newValue && newValue !== oldValue) {
+      $scope.searchFares();
+    }
   });
-
-  fareSearch.getCityCodes().then(function (response) {
-    $scope.cityCodes.data = response;
-  });
-
-
 
 
 

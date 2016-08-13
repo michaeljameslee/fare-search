@@ -34,3 +34,8 @@
   padding: 1em;
   /*color: grey;*/
 }
+
+.results-panel {
+  max-height: 150%;
+  overflow: scroll;
+}
