@@ -1,5 +1,11 @@
 /* app css stylesheet */
 
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+
 .menu {
   list-style: none;
   margin-bottom: 2em;
@@ -11,7 +17,7 @@
 }
 
 
-.location-picker {
+.location-picker, .date-field {
   max-width: 300px;
   float:left;
 }

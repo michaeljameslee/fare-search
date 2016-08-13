@@ -18,10 +18,25 @@
   <![endif]-->
 </head>
 <body>
-  <ul class="menu">
-    <a class="btn btn-default" href="#!/fareList" role="button">Fare List</a>
-    <a class="btn btn-default" href="#!/fareDates" role="button">Fare Dates</a>
-  </ul>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Fare Search</a>
+      </div>
+
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#!/fareList">Fare List</a>
+          </li>
+          <li>
+            <a href="#!/fareDates">Fare Dates</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -46,5 +61,6 @@
   <script src="components/version/interpolate-filter.js"></script>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="libraries/moment/min/moment.min.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
-<div class="container-fluid">
+<div class="container">
 
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12 col-centered">
 
 			<div>
-				<select class="form-control location-picker" ng-model="fareSearch.origin">
+				<select class="form-control location-picker" ng-model="fareSearch.searchParams.origin">
 					<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>
 				</select>
 			</div>
@@ -14,7 +14,7 @@
 			</div>
 
 			<div>
-				<select class="form-control location-picker" ng-model="fareSearch.destination">
+				<select class="form-control location-picker" ng-model="fareSearch.searchParams.destination">
 					<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>
 				</select>
 			</div>
@@ -23,12 +23,11 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12 col-centered">
 
 			<div>
-				<select class="form-control location-picker" ng-model="fareSearch.origin">
-					<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>
-				</select>
+				<input type="text" class="form-control date-field"
+				       ng-model="fareSearch.searchParams.departureDate" />
 			</div>
 
 			<div class="transfer-icon">
@@ -36,9 +35,18 @@
 			</div>
 
 			<div>
-				<select class="form-control location-picker" ng-model="fareSearch.destination">
-					<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>
-				</select>
+				<input type="text" class="form-control date-field"
+				       ng-model="fareSearch.searchParams.returnDate" />
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12 col-centered">
+
+			<div>
+
 			</div>
 
 		</div>
