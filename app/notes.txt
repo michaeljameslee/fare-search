@@ -1,1 +1,25 @@
 Theme: https://bootswatch.com/flatly
+
+
+
+4. Add an airline logo to each flight. I’ll capture gif / jpg / png files for the logos and supply them. The front-end should just leave the logo blank if the file does not exist on the back end.
+
+5. Optionally, provide an additional input parameter of carrier, which will be the airline code.
+
+Add prefix filters
+
+CSS color scheme: Match client
+
+
+
+Date view graph
+
+
+
+When the data comes:
+
+Wireup
+
+Logos
+
+Check on scrollable

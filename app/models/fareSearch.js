@@ -9,8 +9,12 @@ angular.module('myApp.fareSearch', ['ngRoute'])
 	fareSearch.searchParams = {
 		origin: 'DEN',
 		destination: 'BOS',
-		departureDate: moment().add(1, 'days').format('l'),
-		returnDate: moment().add(15, 'days').format('l')
+		viewDepartureDate: '',
+		viewReturnDate: '',
+		departureDate: moment(fareSearch.viewDepartureDate).format('YYYY-MM-DD'),
+		returnDate: moment(fareSearch.departureDate).format('YYYY-MM-DD')
+		//departureDate: moment().add(1, 'days').format('l'),
+		//returnDate: moment().add(15, 'days').format('l')
 	};
 
 	fareSearch.searchFares = api.searchFares;
