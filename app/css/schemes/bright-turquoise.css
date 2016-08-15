@@ -693,7 +693,3 @@ footer#main-footer .form-control:focus {
 .animate-icon-border-fadein.box-icon-to-normal:hover:hover:after {
   background: #159CDC;
 }
-.big-search, .big-search:hover {
-  background-color: #78be20;
-  border-color: #78be20;
-}

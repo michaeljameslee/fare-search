@@ -9,147 +9,199 @@
 		</ul>
 		<div class="tab-content">
 			<div class="tab-pane fade in active" id="flight-search-1">
+
 				<div class="row">
 					<div class="col-md-6">
 						<div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
+
+
 							<label>From</label>
-							<input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text" />
+							<input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text"
+							       ng-model="fareSearch.searchParams.origin"/>
+
+							<!--<select class="form-control" placeholder="Airport Code"-->
+							        <!--ng-model="fareSearch.searchParams.origin">-->
+								<!--<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>-->
+							<!--</select>-->
+
+
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
 							<label>To</label>
-							<input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text" />
+							<input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text"
+							       ng-model="fareSearch.searchParams.destination"/>
 						</div>
 					</div>
 				</div>
-				<div class="input-daterange" data-date-format="M d, D">
+				<div class="input-daterange" data-date-format="yyyy-mm-dd">
 					<div class="row">
 						<div class="col-md-3">
 							<div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-highlight"></i>
 								<label>Departing</label>
-								<input class="form-control" name="start" type="text" ng-model="fareSearch.searchParams.viewDepartureDate" />
+								<input class="form-control" name="start" type="text" ng-model="fareSearch.searchParams.departureDate" />
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-highlight"></i>
 								<label>Returning</label>
-								<input class="form-control" name="end" type="text" ng-model="fareSearch.searchParams.viewReturnDate" />
+								<input class="form-control" name="end" type="text" ng-model="fareSearch.searchParams.returnDate" />
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group form-group-lg form-group-select-plus">
-								<div class="form-group form-group-lg form-group-icon-left">
+								<div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-pied-piper input-icon input-icon-highlight"></i>
 									<label>Carrier</label>
-									<input class="typeahead form-control" placeholder="Carrier" type="text" />
+									<input class="typeahead form-control" placeholder="Carrier" type="text"
+									       ng-model="fareSearch.searchParams.carrier" />
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
-	<button class="btn btn-primary btn-lg big-search" type="submit">Search for Flights</button>
+
+
+	<div class="search-results-pane">
+		<div class="row" ng-repeat="solution in fares.solutions">
+
+			<div class="col-md-2">
+				{{ solution.price }}
+			</div>
+			<div class="col-md-10">
+
+
+				<div class="row" ng-repeat="flight in solution.flights">
+
+					<div class="col-md-3">
+						{{ flight.carrier }} |  {{ flight.fltno }} ({{ flight.equipment }})
+					</div>
+					<div class="col-md-4">
+						{{ flight.departure }} - {{ flight.arrival }}
+					</div>
+					<div class="col-md-5">
+						{{ flight.orig }} -> {{ flight.dest }}
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+
+	<!--<button class="btn btn-primary btn-lg big-search" type="submit">Search for Flights</button>-->
+
+
+
+
+
+
+
 </form>
 
 
 
 
-<div class="container">
+<!--<div class="container">-->
 
-	<div class="row">
-		<div class="col-md-12 col-centered">
+	<!--<div class="row">-->
+		<!--<div class="col-md-12 col-centered">-->
 
-			<div>
-				<select class="form-control location-picker" ng-model="fareSearch.searchParams.origin">
-					<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>
-				</select>
-			</div>
+			<!--<div>-->
+				<!--<select class="form-control location-picker" ng-model="fareSearch.searchParams.origin">-->
+					<!--<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>-->
+				<!--</select>-->
+			<!--</div>-->
 
-			<div class="transfer-icon">
-				<i class="glyphicon glyphicon-transfer"></i>
-			</div>
+			<!--<div class="transfer-icon">-->
+				<!--<i class="glyphicon glyphicon-transfer"></i>-->
+			<!--</div>-->
 
-			<div>
-				<select class="form-control location-picker" ng-model="fareSearch.searchParams.destination">
-					<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>
-				</select>
-			</div>
+			<!--<div>-->
+				<!--<select class="form-control location-picker" ng-model="fareSearch.searchParams.destination">-->
+					<!--<option ng-repeat="option in cityCodes.data" value="{{option}}">{{option}}</option>-->
+				<!--</select>-->
+			<!--</div>-->
 
-		</div>
-	</div>
+		<!--</div>-->
+	<!--</div>-->
 
-	<div class="row">
-		<div class="col-md-12 col-centered">
+	<!--<div class="row">-->
+		<!--<div class="col-md-12 col-centered">-->
 
-			<div>
-				<input type="text" class="form-control date-field"
-				       ng-model="fareSearch.searchParams.departureDate" />
-			</div>
+			<!--<div>-->
+				<!--<input type="text" class="form-control date-field"-->
+				       <!--ng-model="fareSearch.searchParams.departureDate" />-->
+			<!--</div>-->
 
-			<div class="transfer-icon">
-				<i class="glyphicon glyphicon-plane"></i>
-			</div>
+			<!--<div class="transfer-icon">-->
+				<!--<i class="glyphicon glyphicon-plane"></i>-->
+			<!--</div>-->
 
-			<div>
-				<input type="text" class="form-control date-field"
-				       ng-model="fareSearch.searchParams.returnDate" />
-			</div>
+			<!--<div>-->
+				<!--<input type="text" class="form-control date-field"-->
+				       <!--ng-model="fareSearch.searchParams.returnDate" />-->
+			<!--</div>-->
 
-		</div>
-	</div>
+		<!--</div>-->
+	<!--</div>-->
 
-	<div class="row">
-		<div class="col-md-12 col-centered">
+	<!--<div class="row">-->
+		<!--<div class="col-md-12 col-centered">-->
 
-			<div class="panel panel-default">
-				<div class="panel-heading">Search results</div>
-				<div class="panel-body results-panel">
+			<!--<div class="panel panel-default">-->
+				<!--<div class="panel-heading">Search results</div>-->
+				<!--<div class="panel-body results-panel">-->
 
-					<div class="container">
-						<div class="row" ng-repeat="solution in fares.solutions">
+					<!--<div class="container">-->
+						<!--<div class="row" ng-repeat="solution in fares.solutions">-->
 
-							<div class="col-md-2">
-								{{ solution.price }}
-							</div>
-							<div class="col-md-10">
+							<!--<div class="col-md-2">-->
+								<!--{{ solution.price }}-->
+							<!--</div>-->
+							<!--<div class="col-md-10">-->
 
-								<div class="container">
-									<div class="row" ng-repeat="flight in solution.flights">
+								<!--<div class="container">-->
+									<!--<div class="row" ng-repeat="flight in solution.flights">-->
 
-										<div class="col-md-3">
-											{{ flight.carrier }} |  {{ flight.fltno }} ({{ flight.equipment }})
-										</div>
-										<div class="col-md-4">
-											{{ flight.departure }} - {{ flight.arrival }}
-										</div>
-										<div class="col-md-5">
-											{{ flight.orig }} -> {{ flight.dest }}
-										</div>
+										<!--<div class="col-md-3">-->
+											<!--{{ flight.carrier }} |  {{ flight.fltno }} ({{ flight.equipment }})-->
+										<!--</div>-->
+										<!--<div class="col-md-4">-->
+											<!--{{ flight.departure }} - {{ flight.arrival }}-->
+										<!--</div>-->
+										<!--<div class="col-md-5">-->
+											<!--{{ flight.orig }} -> {{ flight.dest }}-->
+										<!--</div>-->
 
-									</div>
-								</div>
+									<!--</div>-->
+								<!--</div>-->
 
-							</div>
-							<hr/>
+							<!--</div>-->
+							<!--<hr/>-->
 
-						</div>
-					</div>
+						<!--</div>-->
+					<!--</div>-->
 
-				</div>
-			</div>
+				<!--</div>-->
+			<!--</div>-->
 
-		</div>
-	</div>
+		<!--</div>-->
+	<!--</div>-->
 
-	<div class="row">
-		<div class="col-md-12 col-centered">
+	<!--<div class="row">-->
+		<!--<div class="col-md-12 col-centered">-->
 
-			Search params: {{ fareSearch.searchParams }}
+			<!--Search params: {{ fareSearch.searchParams }}-->
 
-		</div>
-	</div>
+		<!--</div>-->
+	<!--</div>-->
 
-</div>
+<!--</div>-->
 

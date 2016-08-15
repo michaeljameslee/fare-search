@@ -35,6 +35,4 @@ angular.module('myApp.fareList', ['ngRoute'])
     }
   });
 
-
-
 }]);

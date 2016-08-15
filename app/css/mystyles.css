@@ -1,2 +1,20 @@
 /*YOUR CUSTOM STYLES*/
 
+.tab-pane h2 {
+    color: #78be20;
+}
+
+/*.big-search, .big-search:hover {*/
+    /*background-color: #78be20;*/
+    /*border-color: #78be20;*/
+/*}*/
+
+
+.search-results-pane {
+    overflow-y: scroll;
+}
+
+
+.mt50 {
+    margin-top: 100px !important;
+}

@@ -1,25 +1,39 @@
 Theme: https://bootswatch.com/flatly
+Template: http://preview.themeforest.net/item/traveler-multipurpose-booking-template/full_screen_preview/8526796?_ga=1.137190707.2092777992.1471146388
+Template Local: http://localhost:8000/template/template/index.html
+Template Docs: http://localhost:8000/template/documentation/#!/css_files
+Angular ui-bootstrap: http://angular-ui.github.io/bootstrap/#/getting_started
+Bootstrap Components: http://getbootstrap.com/components/
+Angular Seed: https://github.com/angular/angular-seed
+Lodash: https://lodash.com/docs
+Client Website: https://www.travelport.com/
+Basis for mockup: https://www.kiwi.com/us/
+
+
+Local Host: http://localhost:8000/
+Remote Host: http://gamebookhero.com/fare-search/app
+
+
+TODO Now:
+
+Print results
+
+Pretty results
+
+Directive for typeahead
+	Param: template = (str)
+	Param: options = (obj)
+	Param: selectedOption = (str)
+
+Add an airline logo to each flight. I’ll capture gif / jpg / png files for the logos and supply them. The front-end should just leave the logo blank if the file does not exist on the back end.
+Date view graph (use airline logos I already have)
+
+Scrollable results
+
+Debounce service calls
 
 
 
-4. Add an airline logo to each flight. I’ll capture gif / jpg / png files for the logos and supply them. The front-end should just leave the logo blank if the file does not exist on the back end.
-
-5. Optionally, provide an additional input parameter of carrier, which will be the airline code.
-
-Add prefix filters
-
-CSS color scheme: Match client
-
-
-
-Date view graph
-
-
-
-When the data comes:
+TODO When the data comes:
 
 Wireup
-
-Logos
-
-Check on scrollable
