@@ -65,30 +65,40 @@
 		</div>
 	</div>
 
+	<div class="row search-results-header">
+		<h5>Search results...</h5>
+	</div>
 
 	<div class="search-results-pane">
-		<div class="row" ng-repeat="solution in fares.solutions">
 
-			<div class="col-md-2">
-				{{ solution.price }}
+
+
+		<div class="row solution-container" ng-repeat="solution in fares.solutions">
+
+			<div class="col-md-2 price-container">
+				<span class="price">
+					{{ solution.price | currency }}
+				</span>
 			</div>
+
 			<div class="col-md-10">
-
-
-				<div class="row" ng-repeat="flight in solution.flights">
+				<div class="row flight-container" ng-repeat="flight in solution.flights">
 
 					<div class="col-md-3">
-						{{ flight.carrier }} |  {{ flight.fltno }} ({{ flight.equipment }})
+						<img src="img/airlines/{{ flight.carrier }}.jpg" alt="{{ flight.carrier }}" class="airline-img" />
+						<span>Flight {{ flight.fltno }}</span>
+						<br/>
+						<span>( {{ flight.equipment }} <i class="fa fa-plane input-icon input-icon-highlight"></i> )</span>
+
 					</div>
 					<div class="col-md-4">
 						{{ flight.departure }} - {{ flight.arrival }}
 					</div>
 					<div class="col-md-5">
-						{{ flight.orig }} -> {{ flight.dest }}
+						({{ flight.orig }}) <i class="fa fa-long-arrow-right input-icon input-icon-highlight"></i> ({{ flight.dest }})
 					</div>
 
 				</div>
-
 			</div>
 
 

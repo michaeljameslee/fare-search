@@ -1,5 +1,38 @@
 /*YOUR CUSTOM STYLES*/
 
+.bg-content {
+    /*top: 50px;*/
+
+}
+
+@media (min-width: 1200px) {
+    .content-container {
+        /*padding: 20px 0 0 200px;*/
+        /*position: fixed;*/
+        /*margin-top: 200px !important;*/
+    }
+}
+
+.mt50 {
+
+}
+
+.bg-holder > .bg-mask, .bg-holder > .bg-mask-darken, .bg-holder > .bg-mask-lighten, .bg-holder > .bg-mask-white, .bg-holder > .bg-mask-color, .bg-holder > .bg-mask-color-invert {
+    opacity: 0;
+}
+
+.bg-holder > .bg-mask, .bg-holder > .bg-parallax, .bg-holder > .bg-img {
+    height: 122%;
+}
+
+.bg-holder > .bg-holder-content, .bg-holder > .bg-content {
+    /*top: 200px !important;*/
+}
+
+.tab-pane {
+
+}
+
 .tab-pane h2 {
     color: #78be20;
 }
@@ -9,12 +42,54 @@
     /*border-color: #78be20;*/
 /*}*/
 
+.tab-content {
+
+}
+
+.top-area {
+    height: 1200px;
+}
 
 .search-results-pane {
+    height: 1200px;
     overflow-y: scroll;
 }
 
 
-.mt50 {
-    margin-top: 100px !important;
+.price-container {
+    padding-top: 12px;
 }
+
+.price {
+    white-space: nowrap;
+    color: #78be20;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.airline-img {
+    max-height: 20px;
+    max-width: 20px;
+}
+
+.solution-container {
+    border-top: 1px solid #999;
+    margin-bottom: .5em;
+    padding: .5em 0 .5em 0;
+}
+
+.flight-container {
+    padding-bottom: .5em;
+}
+
+.search-results-header {
+    padding-left: 15px;
+}
+
+.stretch-container {
+    height: 300px;
+}
+
+
+
+

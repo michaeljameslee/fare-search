@@ -510,4 +510,17 @@ function abortTimer() { // to be called when you want to stop the timer
     clearInterval(tid);
 }
 
+
+function adjustContentPosition() {
+    var contentOffset = $( "#main-header" ).height() + 50;
+    $( ".content-container").css("margin-top", contentOffset);
+}
+
+adjustContentPosition();
+
+$( window ).resize(function() {
+    adjustContentPosition();
+});
+
+
 }, 1000);
