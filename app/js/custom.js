@@ -517,6 +517,7 @@ function adjustContentPosition() {
 }
 
 adjustContentPosition();
+window.scrollTo(0, 0);
 
 $( window ).resize(function() {
     adjustContentPosition();

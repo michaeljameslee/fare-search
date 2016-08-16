@@ -16,24 +16,19 @@ Remote Host: http://gamebookhero.com/fare-search/app
 
 TODO Now:
 
-Print results
-
-Pretty results
-
 Directive for typeahead
 	Param: template = (str)
 	Param: options = (obj)
 	Param: selectedOption = (str)
 
-Add an airline logo to each flight. I’ll capture gif / jpg / png files for the logos and supply them. The front-end should just leave the logo blank if the file does not exist on the back end.
-Date view graph (use airline logos I already have)
-
-Scrollable results
-
-Debounce service calls
-
+Date formatting
 
 
 TODO When the data comes:
 
 Wireup
+
+Add an airline logo to each flight. I’ll capture gif / jpg / png files for the logos and supply them. The front-end should just leave the logo blank if the file does not exist on the back end.
+Date view graph (use airline logos I already have)
+
+Debounce service calls
