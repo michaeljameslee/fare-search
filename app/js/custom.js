@@ -512,7 +512,7 @@ function abortTimer() { // to be called when you want to stop the timer
 
 
 function adjustContentPosition() {
-    var contentOffset = $( "#main-header" ).height() + 50;
+    var contentOffset = $( "#main-header" ).height() + 0;
     $( ".content-container").css("margin-top", contentOffset);
 }
 

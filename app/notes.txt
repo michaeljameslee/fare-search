@@ -9,19 +9,24 @@ Lodash: https://lodash.com/docs
 Client Website: https://www.travelport.com/
 Basis for mockup: https://www.kiwi.com/us/
 
-
 Local Host: http://localhost:8000/
 Remote Host: http://gamebookhero.com/fare-search/app
 
 
 TODO Now:
 
-Directive for typeahead
-	Param: template = (str)
-	Param: options = (obj)
-	Param: selectedOption = (str)
+x Change "Search for Cheap Flights" to "Search for Flights"
 
-Date formatting
+x Hide tabs
+
+x Hide List View, Date View
+
+x Date formatting
+
+From and To are dropdowns
+
+Carrier field is two characters
+
 
 
 TODO When the data comes:
@@ -32,3 +37,10 @@ Add an airline logo to each flight. I’ll capture gif / jpg / png files for the
 Date view graph (use airline logos I already have)
 
 Debounce service calls
+
+
+Maybe ...
+Directive for typeahead
+	Param: template = (str)
+	Param: options = (obj)
+	Param: selectedOption = (str)
