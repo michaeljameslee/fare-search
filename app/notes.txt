@@ -23,7 +23,7 @@ x Hide List View, Date View
 
 x Date formatting
 
-
+Formatting the dates
 
 TODO When the data comes:
 
