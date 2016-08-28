@@ -32,7 +32,7 @@ Wireup
 Add an airline logo to each flight. I’ll capture gif / jpg / png files for the logos and supply them. The front-end should just leave the logo blank if the file does not exist on the back end.
 Date view graph (use airline logos I already have)
 
-From and To are dropdowns
+Make From and To into dropdowns
 
 Debounce service calls
 
@@ -41,3 +41,5 @@ Directive for typeahead
 	Param: template = (str)
 	Param: options = (obj)
 	Param: selectedOption = (str)
+
+Mask for carrier field (two characters)
